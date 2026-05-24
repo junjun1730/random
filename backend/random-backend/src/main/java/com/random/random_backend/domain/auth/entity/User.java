@@ -1,6 +1,6 @@
-package com.random.random_backend.auth.entity;
+package com.random.random_backend.domain.auth.entity;
 
-import com.random.random_backend.common.entity.BaseTimeEntity;
+import com.random.random_backend.domain.common.entity.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
