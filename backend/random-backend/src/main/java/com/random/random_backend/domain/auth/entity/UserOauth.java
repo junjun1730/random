@@ -1,5 +1,6 @@
 package com.random.random_backend.domain.auth.entity;
 
+import com.random.random_backend.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 
