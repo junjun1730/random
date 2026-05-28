@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 @Slf4j
-@Component
+//@Component
 public class JwtProvider {
     @Value("${app.jwt.secret}")
     private String secret;
