@@ -1,4 +1,4 @@
-package com.random.randombackend.global.config;
+package com.random.random_backend.global.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,14 +29,9 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-//                .csrf(csrf -> csrf.disable())
-//                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-//                .sessionManagement(session ->
-//                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//                )
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 );
 //                .exceptionHandling(exception -> exception
 //                        .authenticationEntryPoint((request, response, authException) -> {
