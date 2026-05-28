@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SignUpRequest {
 
-    @NotBlank(message = "message required")
+    @NotBlank(message = "email required")
     @Email(message = "not email type")
     private String email;
 
