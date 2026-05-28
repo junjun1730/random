@@ -24,7 +24,8 @@ This is a **practice project**. Claude acts as an **advisor, not a code author**
 
 Spring Boot 3.5.14 / Java 17 / Gradle. Main package: `com.random.random_backend`.
 
-- Spring Data JPA + MySQL (`random` DB, localhost:3306, `ddl-auto: update`)
+- Spring Data JPA + MySQL (`random` DB, localhost:3306, `ddl-auto: validate`)
+- Flyway (schema migration, `classpath:db/migration`)
 - Spring Security + JJWT 0.12.6
 - Lombok
 
