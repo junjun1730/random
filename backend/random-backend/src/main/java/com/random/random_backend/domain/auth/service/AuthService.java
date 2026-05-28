@@ -5,6 +5,8 @@ import com.random.random_backend.domain.auth.entity.UserCredential;
 import com.random.random_backend.domain.auth.repository.UserCredentialRepository;
 import com.random.random_backend.domain.user.entity.User;
 import com.random.random_backend.domain.user.repository.UserRepository;
+import com.random.random_backend.global.error.BusinessException;
+import com.random.random_backend.global.error.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,7 +22,7 @@ public class AuthService {
     @Transactional
     public Long signup(SignUpRequest signUpRequest) {
         if (userRepository.existsByEmail(signUpRequest.getEmail())) {
-            throw new IllegalArgumentException("이미 가입된 이메일입니다.");
+            throw new BusinessException(ErrorCode.DUPLICATE_EMAIL);
         }
 
         User user = User.builder().email(signUpRequest.getEmail()).build();
